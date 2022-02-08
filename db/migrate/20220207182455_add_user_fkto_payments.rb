@@ -1,5 +1,5 @@
 class AddUserFktoPayments < ActiveRecord::Migration[7.0]
   def change
-    add_foreign_key :payments, :users, column: :authorId, primary_key: :id
+    add_reference :payments, :author, foreign_key: {to_table: :users}
   end
 end

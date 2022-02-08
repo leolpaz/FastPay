@@ -1,0 +1,32 @@
+.nav-container {
+  padding: 2% 2%;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #2e588a;
+  height: 5vh;
+}
+
+.nav-container > * {
+  height: 70%;
+}
+
+.nav-title > h2 {
+  font-weight: var(--headline-weight);
+  font-size: 16px;
+}
+
+.nav-container .actions {
+  display: flex;
+}
+
+.nav-container a {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-container input {
+  background-color: inherit;
+  border: none;
+  color: white;
+  line-height: 0;
+}

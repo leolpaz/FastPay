@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  devise_scope :user do
+    get '/users/sign_in' => 'devise/sessions#create'
+    get '/users/sign_up' => 'devise/registrations#new'
+  end
+  root "splash#index"
+  resources :groups, only: [:index, :create] do
+  end
+  get '*unmatched_route', to: 'user#index'
 end

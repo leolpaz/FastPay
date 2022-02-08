@@ -15,6 +15,9 @@ gem 'pg', '~> 1.1'
 # Devise for user authentication
 gem 'devise'
 
+# Font awesone
+gem "font-awesome-rails"
+
 # Cancancan for authorization management
 gem 'cancancan'
 

@@ -27,16 +27,19 @@ ActiveRecord::Schema.define(version: 2022_02_07_183643) do
   create_table "groups_payments", id: false, force: :cascade do |t|
     t.bigint "group_id", null: false
     t.bigint "payment_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.index ["group_id"], name: "index_groups_payments_on_group_id"
     t.index ["payment_id"], name: "index_groups_payments_on_payment_id"
   end
 
   create_table "payments", force: :cascade do |t|
-    t.integer "authorId"
     t.string "name"
     t.money "amount", scale: 2
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "author_id"
+    t.index ["author_id"], name: "index_payments_on_author_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -53,5 +56,5 @@ ActiveRecord::Schema.define(version: 2022_02_07_183643) do
   end
 
   add_foreign_key "groups", "users"
-  add_foreign_key "payments", "users", column: "authorId"
+  add_foreign_key "payments", "users", column: "author_id"
 end
