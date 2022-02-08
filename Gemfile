@@ -16,7 +16,7 @@ gem 'pg', '~> 1.1'
 gem 'devise'
 
 # Font awesone
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
 
 # Cancancan for authorization management
 gem 'cancancan'
