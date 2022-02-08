@@ -13,11 +13,12 @@
  *= require_tree .
  *= require_self
  */
- /*
+
+/*
  *= require font-awesome
  */
 
- :root {
+:root {
   --background-color: #f5f6f8;
   --border-color: #f4f4f4;
   --main-color: #3778c2;
@@ -64,11 +65,11 @@ body {
 }
 
 .c-main {
-  color: var(--main-color)
+  color: var(--main-color);
 }
 
 .c-secondary {
-  color: var(--secondary-color)
+  color: var(--secondary-color);
 }
 
 .c-text {
