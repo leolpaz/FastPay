@@ -6,19 +6,19 @@
   <%= root_path %>
 <% end %>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<%= form_for(resource, :html => {:class => "new"}, as: resource_name, url: session_path(resource_name)) do |f| %>
   <% content_for :link do%>
-    <div class="actions">
+    <div class="actions h-100">
       <%= f.submit "Log in", form:'new_user' %>
     </div>
   <% end %>
   
   <div class="sign-field d-flex">
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email' %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email', class:'sign-input' %>
   </div>
 
   <div class="sign-field d-flex">
-    <%= f.password_field :password, autocomplete: "current-password", placeholder: 'Password' %>
+    <%= f.password_field :password, autocomplete: "current-password", placeholder: 'Password', class:'sign-input' %>
   </div>
 <% end %>
 <div class="sign-password w-100">
