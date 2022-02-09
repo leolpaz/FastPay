@@ -1,0 +1,9 @@
+<%= link_to group_payments_path(item.id) do %>
+<li class='list-item'>
+  <%= image_tag("#{item.icon}.png", :alt => item.icon, class:'list-image') %>
+  <div class="list-info">
+    <h2 class="c-text"><%= item.name %></h2>
+    <h3 class="c-text">Transactions: <%= item.payments.size %></h3>
+  </div>
+</li>
+<% end %>

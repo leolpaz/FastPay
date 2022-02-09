@@ -1,13 +1,30 @@
 .nav-container {
-  padding: 2% 2%;
+  padding: 0 1.5%;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #2e588a;
-  height: 5vh;
+  height: 6vh;
 }
 
 .nav-container > * {
-  height: 70%;
+  height: 100%;
+}
+
+.link-container,
+.icon-container {
+  width: 20%;
+  align-items: center;
+}
+
+.link-container {
+  display: flex;
+  justify-content: end;
+}
+
+.nav-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-title > h2 {
@@ -21,7 +38,6 @@
 
 .nav-container a {
   display: flex;
-  justify-content: center;
 }
 
 .nav-container input {

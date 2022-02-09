@@ -1,9 +1,11 @@
 <nav class='main-bg d-flex nav-container'>
-  <%= link_to  content_for?(:before_page) ? yield(:before_page) : :back, class:'default-link' do %>
-    <%= fa_icon "arrow-left", class:'c-white test' %>
+  <%= link_to  content_for?(:before_page) ? yield(:before_page) : :back, class:'default-link icon-container' do %>
+    <%= fa_icon "arrow-left", class:'c-white' %>
   <% end %>
   <div class="nav-title">
-    <h2 class="c-white"><%= content_for?(:title) ? yield(:title) : '' %></h2>
+    <h2 class="c-white"><%= content_for?(:title) ? yield(:title) : ' ' %></h2>
   </div>
-  <%= content_for?(:link) ? yield(:link) : '' %>
+  <div class='link-container'>
+    <%= content_for?(:link) ? yield(:link) : '' %>
+  </div>
 </nav>

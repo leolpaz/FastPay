@@ -1,0 +1,37 @@
+input[type="radio"]:checked + .radio-label {
+  position: relative;
+  overflow: hidden;
+}
+
+input[type="radio"]:checked + .radio-label::before {
+  content: '';
+  position: absolute;
+  background-image:
+    conic-gradient(
+      #059900 20deg,
+      transparent 120deg
+    );
+  height: 150%;
+  width: 150%;
+  bottom: 0;
+  left: -25%;
+  top: -25%;
+  right: 0;
+  z-index: 1;
+  animation: rotate 2s infinite linear;
+}
+
+@keyframes rotate {
+  100% { transform: rotate(-360deg); }
+}
+
+input[type="radio"]:checked + .radio-label::after {
+  content: '';
+  height: 90%;
+  width: 90%;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  background-color: white;
+  z-index: 2;
+}
