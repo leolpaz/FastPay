@@ -1,0 +1,70 @@
+.new {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5vh;
+  background-color: white;
+  border-top: 3px solid var(--border-color);
+  border-bottom: 3px solid var(--border-color);
+}
+
+.sign-field {
+  width: 100%;
+  justify-content: center;
+  height: 6vh;
+  border: none;
+}
+
+.new input {
+  border: none;
+  outline: none;
+  border-bottom: 3px solid var(--border-color);
+}
+
+.sign-input {
+  width: 90%;
+}
+
+.recovery {
+  color: var(--placeholder-color);
+}
+
+.sign-password {
+  display: flex;
+  justify-content: center;
+  margin-top: 3vh;
+}
+
+.sign-field:last-child input {
+  border: none;
+}
+
+.new input::placeholder {
+  color: var(--placeholder-color);
+  font-weight: var(--headline-weight);
+}
+
+.radio-field {
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  margin: 2% 0;
+  padding: 1% 0;
+  border-bottom: 3px solid var(--border-color);
+}
+
+.form-radio {
+  display: none;
+}
+
+.form-image {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  z-index: 9999;
+}
+
+.radio-label {
+  padding: 2%;
+  border-radius: 5px;
+}

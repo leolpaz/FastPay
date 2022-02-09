@@ -103,14 +103,14 @@ button {
 }
 
 .notice {
-  background-color: rgba(209, 209, 127, 0.61);
+  background-color: rgba(137, 235, 137, 0.61);
   text-align: center;
-  margin: 2%;
+  margin: 1vh;
 }
 
 .alert,
 #error_explanation {
   background-color: rgba(206, 98, 98, 0.568);
   text-align: center;
-  margin: 2%;
+  margin: 1vh;
 }

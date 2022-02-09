@@ -1,0 +1,36 @@
+<% content_for :title do %>
+  New Category
+<% end %>
+
+<% content_for :before_page do %>
+  <%= groups_path %>
+<% end %>
+
+<%= form_with scope: :group, url: :groups, class:'new', id:'new' do |f| %>
+  <% content_for :link do%>
+  <div class="actions h-100">
+    <%= f.submit "Save", form:'new' %>
+  </div>
+  <% end %>
+  <div class="sign-field d-flex">
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: 'Name', class:'sign-input' %>
+  </div>
+  <h2 class="c-text">Select icon</h2>
+  <div class="radio-field d-flex">
+    <%= f.radio_button :icon, 'money', class:'form-radio' %>
+    <label class='radio-label' for="group_icon_money"><%= image_tag('money.png', :alt => 'money', class:'form-image') %></label>
+  </div>
+  <div class="radio-field d-flex">
+    <%= f.radio_button :icon, 'food', class:'form-radio' %>
+    <label class='radio-label' for="group_icon_food"><%= image_tag('food.png', :alt => 'food', class:'form-image') %></label>
+  </div>
+  <div class="radio-field d-flex">
+    <%= f.radio_button :icon, 'drinks', class:'form-radio' %>
+    <label class='radio-label' for="group_icon_drinks"><%= image_tag('drinks.png', :alt => 'drinks', class:'form-image') %></label>
+  </div>
+  <div class="radio-field d-flex">
+    <%= f.radio_button :icon, 'games', class:'form-radio' %>
+    <label class='radio-label' for="group_icon_games"><%= image_tag('games.png', :alt => 'games', class:'form-image') %></label>
+  </div>
+
+<% end %>
