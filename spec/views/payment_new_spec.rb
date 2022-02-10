@@ -14,7 +14,7 @@ RSpec.describe 'Payment new', type: :feature do
   end
   describe 'tests the payment new page' do
     it 'can see the nav bar' do
-      expect(page).to have_content "NEW TRANSACTION"
+      expect(page).to have_content 'NEW TRANSACTION'
     end
     it 'can see the name field' do
       expect(page).to have_field 'Name'
@@ -24,18 +24,18 @@ RSpec.describe 'Payment new', type: :feature do
     end
     it 'can see the categories field' do
       expect(page).to have_content 'SELECT CATEGORIES'
-      expect(page).to have_selector "input", :id => "groups_payment_group_ids_#{@g1.id}"
-      expect(page).to have_selector "input", :id => "groups_payment_group_ids_#{@g2.id}" 
+      expect(page).to have_selector 'input', id: "groups_payment_group_ids_#{@g1.id}"
+      expect(page).to have_selector 'input', id: "groups_payment_group_ids_#{@g2.id}"
     end
     it 'can create a new category' do
       fill_in 'Name', with: 'A new transaction'
       fill_in 'Amount', with: 25
-      check :id => "groups_payment_group_ids_#{@g1.id}"
-      check :id => "groups_payment_group_ids_#{@g2.id}"
+      check id: "groups_payment_group_ids_#{@g1.id}"
+      check id: "groups_payment_group_ids_#{@g2.id}"
       click_button 'Save'
       expect(page).to have_current_path(group_payments_path(@g1.id))
       expect(page).to have_content 'Your new transaction has been created'
-      expect(page).to have_content 'A new transaction' 
+      expect(page).to have_content 'A new transaction'
     end
   end
 end

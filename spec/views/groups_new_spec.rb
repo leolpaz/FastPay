@@ -18,14 +18,14 @@ RSpec.describe 'Group new', type: :feature do
     end
     it 'can see the icons field' do
       expect(page).to have_content 'Select icon'
-      expect(page).to have_selector "input", :id => 'group_icon_money' 
-      expect(page).to have_selector "input", :id => 'group_icon_food' 
-      expect(page).to have_selector "input", :id => 'group_icon_games' 
-      expect(page).to have_selector "input", :id => 'group_icon_drinks' 
+      expect(page).to have_selector 'input', id: 'group_icon_money'
+      expect(page).to have_selector 'input', id: 'group_icon_food'
+      expect(page).to have_selector 'input', id: 'group_icon_games'
+      expect(page).to have_selector 'input', id: 'group_icon_drinks'
     end
     it 'can create a new category' do
       fill_in 'Name', with: 'A new category'
-      choose :id => 'group_icon_money'
+      choose id: 'group_icon_money'
       click_button 'Save'
       expect(page).to have_current_path(groups_path)
       expect(page).to have_content 'Your new category has been created'

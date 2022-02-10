@@ -1,11 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe Group, type: :model do
-  before(:each) {
+  before(:each) do
     @u = User.new(name: 'test', password: 'testpass', email: 'test@test.com')
     @u.save
-    @g = @u.groups.new(name: 'test', icon: 'food') 
-  }
+    @g = @u.groups.new(name: 'test', icon: 'food')
+  end
   it 'name should be present' do
     expect(@g).to be_valid
     @g.name = nil
@@ -18,7 +18,7 @@ RSpec.describe Group, type: :model do
   end
   it 'should belong to an user' do
     expect(@g).to be_valid
-    @g = Group.new(name: 'test', icon: 'food') 
+    @g = Group.new(name: 'test', icon: 'food')
     expect(@g).to_not be_valid
   end
 end
