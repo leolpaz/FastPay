@@ -1,0 +1,10 @@
+<li class='list-item w-95'>
+  <div class="list-payments d-flex">
+    <%= image_tag("#{@group.icon}.png", :alt => @group.icon, class:'list-image transaction-image') %>
+    <div class="payment-info">
+      <h2 class="c-text text-weight"><%= item.name %></h2>
+      <p class="c-text list-time"><%= item.created_at.strftime("%d %b %Y") %></p>
+       <p class="c-text headline-weight list-amount">$<%= item.amount.to_f %></p>
+    </div>
+  </div>
+</li>

@@ -8,9 +8,9 @@
 
 <%= form_with scope: :group, url: :groups, class:'new', id:'new' do |f| %>
   <% content_for :link do%>
-  <div class="actions h-100">
-    <%= f.submit "Save", form:'new' %>
-  </div>
+    <div class="actions h-100">
+      <%= f.submit "Save", form:'new' %>
+    </div>
   <% end %>
   <div class="sign-field d-flex">
     <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: 'Name', class:'sign-input' %>
