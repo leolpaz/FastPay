@@ -14,7 +14,7 @@
 - HTML
 - CSS
 
-## Live Demo (if available)
+## Live Demo
 
 [Live Demo Link](https://leolpaz-fastpay.herokuapp.com/)
 
