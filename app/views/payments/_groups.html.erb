@@ -1,0 +1,7 @@
+<div class="checkbox-field d-flex">
+  <%= f.check_box 'group_ids', { :multiple => true }, :"#{groups.id}", nil %>
+  <label class='checkbox-label' for=<%= "groups_payment_group_ids_#{groups.id}" %>>
+    <div class="group-name"><p class="c-text"><%= groups.name %></p></div>
+    <%=image_tag("#{groups.icon}.png", :alt => "#{groups.icon}", class:'form-image') %>
+  </label>
+</div>

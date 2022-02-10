@@ -1,0 +1,48 @@
+.nav-container {
+  padding: 0 1.5%;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #2e588a;
+  height: 6vh;
+}
+
+.nav-container > * {
+  height: 100%;
+}
+
+.link-container,
+.icon-container {
+  width: 20%;
+  align-items: center;
+}
+
+.link-container {
+  display: flex;
+  justify-content: end;
+}
+
+.nav-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-title > h2 {
+  font-weight: var(--headline-weight);
+  font-size: 16px;
+}
+
+.nav-container .actions {
+  display: flex;
+}
+
+.nav-container a {
+  display: flex;
+}
+
+.nav-container input {
+  background-color: inherit;
+  border: none;
+  color: white;
+  line-height: 0;
+}

@@ -1,0 +1,43 @@
+.splash-container {
+  height: 100vh;
+  width: 100vw;
+}
+
+.splash-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70%;
+  font-weight: var(--headline-weight);
+  font-size: 32px;
+}
+
+.splash-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 30%;
+  gap: 5%;
+}
+
+.splash-container a {
+  width: 80%;
+  height: 20%;
+}
+
+.splash-login:hover {
+  background-color: white;
+  color: black;
+  outline: 1px solid var(--main-color);
+  transition: 0.2s ease-in-out;
+}
+
+.splash-signup {
+  background-color: white;
+  color: black;
+}
+
+.splash-signup:hover {
+  outline: 1px solid black;
+  transition: 0.2s ease-in-out;
+}

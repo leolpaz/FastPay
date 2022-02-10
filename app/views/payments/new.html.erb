@@ -1,0 +1,28 @@
+<% content_for :title do %>
+  New transaction
+<% end %>
+
+<% content_for :before_page do %>
+  <%= group_payments_path %>
+<% end %>
+
+
+<%= form_with scope: :payment, url: :group_payments, class:'new', id:'new' do |f| %>
+  <% content_for :link do%>
+    <div class="actions h-100">
+      <%= f.submit "Save", form:'new' %>
+    </div>
+  <% end %>
+  <div class="sign-field d-flex">
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: 'Name', class:'sign-input' %>
+  </div>
+  <div class="sign-field d-flex">
+    <%= f.number_field :amount, :step => 0.01, autofocus: true, autocomplete: "name", placeholder: 'Amount', class:'sign-input' %>
+  </div>
+  <div class="form-groups-container">
+    <%= fields_for :groups_payment do |ff| %>
+      <h2 class='c-text'>SELECT CATEGORIES</h2>
+      <%= render partial: "groups", collection: @groups, locals: {f: ff} %>
+    <% end %>
+  </div>
+<% end %>

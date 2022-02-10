@@ -1,0 +1,15 @@
+<% content_for :title do %>
+  Categories
+<% end %>
+
+<% content_for :before_page do %>
+  <%= root_path %>
+<% end %>
+<div class="list-container">
+  <ul class="items-container d-flex">
+    <%= render partial: "item", collection: @groups %>
+  </ul>
+  <div class="list-button-container">
+    <%= button_to 'CREATE NEW CATEGORY', [:new_group], method:'get', class:'list-button c-white secondary-bg headline-weight'  %>
+  </div> 
+</div>

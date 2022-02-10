@@ -1,0 +1,27 @@
+<% content_for :title do %>
+  REGISTER
+<% end %>
+
+<% content_for :before_page do %>
+  <%= root_path %>
+<% end %>
+
+<%= form_for(resource, :html => {:class => "new"}, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  <% content_for :link do%>
+    <div class="actions h-100">
+      <%= f.submit "Next", form:'new_user' %>
+    </div>
+  <% end %>
+  <div class="sign-field d-flex">
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: 'Full name', class:'sign-input' %>
+  </div>
+
+  <div class="sign-field d-flex">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email', class:'sign-input' %>
+  </div>
+
+  <div class="sign-field d-flex">
+    <%= f.password_field :password, autocomplete: "current-password", placeholder: 'Password', class:'sign-input' %>
+  </div>
+<% end %>
