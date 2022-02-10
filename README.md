@@ -17,6 +17,10 @@
 
 [Live Demo Link](https://leolpaz-fastpay.herokuapp.com/)
 
+## Screenshot
+
+![screenshot](screenshot.png)
+
 
 ## Getting Started
 
