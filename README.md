@@ -34,7 +34,7 @@ To get a local copy up and running follow these simple example steps.
 - Ruby
 - rbenv
 - Postgresql
-- Heroku accont(Only for personal deployment)
+- Heroku account(Only for personal deployment)
 
 ### Setup
 
