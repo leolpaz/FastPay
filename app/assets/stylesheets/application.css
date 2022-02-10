@@ -40,6 +40,10 @@ body {
   background-color: var(--background-color);
 }
 
+h1 {
+  font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+}
+
 .w-100 {
   width: 100%;
 }
@@ -102,15 +106,28 @@ button {
   text-decoration: none;
 }
 
+.w-95 {
+  width: 95%;
+}
+
+@keyframes disappear {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
 .notice {
-  background-color: rgba(137, 235, 137, 0.61);
+  background-color: var(--secondary-color);
   text-align: center;
-  margin: 1vh;
+  width: 100%;
+  position: absolute;
+  animation: disappear 3s linear forwards;
 }
 
 .alert,
 #error_explanation {
   background-color: rgba(206, 98, 98, 0.568);
   text-align: center;
-  margin: 1vh;
+  width: 100%;
+  position: absolute;
+  animation: disappear 3s linear forwards;
 }

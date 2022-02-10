@@ -1,0 +1,20 @@
+<% content_for :title do %>
+  TRANSACTIONS FOR <%= @group.name %>
+<% end %>
+
+<% content_for :before_page do %>
+  <%= groups_path %>
+<% end %>
+
+<div class="list-container">
+  <ul class="items-container d-flex">
+    <li class="list-item">
+      <h2 class="c-text text-weight">Total:</h2>  <span class="c-text headline-weight">$<%= group_payments_sum(@payments) %></span>
+    </li>
+    <%= render partial: "item", collection: @payments %>
+
+  </ul>
+  <div class="list-button-container">
+    <%= button_to 'CREATE NEW TRANSACTION', new_group_payment_path, method:'get', class:'list-button c-white secondary-bg headline-weight'  %>
+  </div>
+</div>

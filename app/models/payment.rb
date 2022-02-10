@@ -1,6 +1,8 @@
 class Payment < ApplicationRecord
+  attribute :amount, :money
   belongs_to :author, class_name: 'User'
-  has_and_belongs_to_many :groups
+  has_many :groups_payments
+  has_many :groups, through: :groups_payments
   validates :name, presence: true
   validates :amount, presence: true
 end
