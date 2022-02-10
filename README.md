@@ -39,6 +39,7 @@ To get a local copy up and running follow these simple example steps.
 
 - Make sure you have Ruby and Postgresql installed and set up
 - Clone the repository with git clone https://github.com/leolpaz/FastPay.git
+- Open it in the IDE of your choice and open a terminal pointing to the app folder
 
 ### Install
 
@@ -56,10 +57,10 @@ To get a local copy up and running follow these simple example steps.
 
 ### Deployment
 
-- Use the already deployed project
+- Use the already deployed project on the live demo section
  #### To deploy from your own fork
 - Run the command heroku create (Needs to be logged in, use heroku login if needed)
-- Run git push heroku <branch name>
+- Run git push heroku <branch name> and git push heroku main
 - heroku run rails db:migrate
 - heroku open
 
