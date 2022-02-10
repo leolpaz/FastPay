@@ -3,7 +3,7 @@
     <%= fa_icon "arrow-left", class:'c-white' %>
   <% end %>
   <div class="nav-title">
-    <h2 class="c-white"><%= content_for?(:title) ? yield(:title) : ' ' %></h2>
+    <h1 class="c-white"><%= content_for?(:title) ? yield(:title).upcase : ' ' %></h1>
   </div>
   <div class='link-container'>
     <%= content_for?(:link) ? yield(:link) : '' %>

@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 20_220_207_183_643) do
     t.money 'amount', scale: 2
     t.datetime 'created_at', precision: 6, null: false
     t.datetime 'updated_at', precision: 6, null: false
-    t.bigint 'author_id'
+    t.bigint 'author_id', null: false
     t.index ['author_id'], name: 'index_payments_on_author_id'
   end
 
