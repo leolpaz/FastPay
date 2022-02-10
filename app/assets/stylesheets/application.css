@@ -42,6 +42,7 @@ body {
 
 h1 {
   font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  text-align: center;
 }
 
 .w-100 {

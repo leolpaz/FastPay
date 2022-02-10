@@ -21,6 +21,7 @@
   </div>
   <div class="form-groups-container">
     <%= fields_for :groups_payment do |ff| %>
+      <h2 class='c-text'>SELECT CATEGORIES</h2>
       <%= render partial: "groups", collection: @groups, locals: {f: ff} %>
     <% end %>
   </div>
