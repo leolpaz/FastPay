@@ -38,6 +38,7 @@ To get a local copy up and running follow these simple example steps.
 ### Setup
 
 - Make sure you have Ruby and Postgresql installed and set up
+- Clone the repository with git clone https://github.com/leolpaz/FastPay.git
 
 ### Install
 
